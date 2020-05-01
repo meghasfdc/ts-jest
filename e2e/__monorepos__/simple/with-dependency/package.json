@@ -2,7 +2,9 @@
   "name": "with-dependency",
   "version": "0.0.1",
   "scripts": {
-    "test": "jest --no-cache"
+    "test": "jest --no-cache",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "jest": {
     "preset": "ts-jest",
@@ -42,7 +44,9 @@
   "dependencies": {
     "@types/jest": "^25.1.2",
     "dependency": "file:../dependency",
-    "jest": "^25.1.0"
+    "jest": "^25.1.0",
+    "snyk": "^1.316.1"
   },
-  "main": "./index.ts"
+  "main": "./index.ts",
+  "snyk": true
 }
